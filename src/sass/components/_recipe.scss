@@ -1,0 +1,204 @@
+.recipe {
+  width: 80rem;
+  //   min-height: 100rem;
+  align-self: stretch;
+  background-color: $color-grey-light-1;
+
+  &__initial {
+    margin: 2rem auto;
+    width: 50rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem;
+    &__icon {
+      width: 5rem;
+      stroke: $color-primary;
+    }
+    &__text {
+      color: $color-grey-dark-1;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    padding-bottom: 40rem;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 20%) skewY(-6deg);
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.25rem;
+    text-transform: uppercase;
+    width: 50%;
+    line-height: 1.95;
+    text-align: center;
+    span {
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      padding: 1.3rem 2rem;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-grad-1,
+        $color-grad-2
+      );
+    }
+  }
+
+  &__manual {
+    padding: 10rem 8rem 4rem 8rem;
+    background-color: $color-grey-light-1;
+    display: flex;
+    gap: 4rem;
+
+    &__time {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      &__icon {
+        width: 2.5rem;
+        stroke: $color-primary;
+      }
+      &__text {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__serving {
+      display: flex;
+      align-items: center;
+      &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        stroke: $color-primary;
+        margin-right: 1rem;
+      }
+      &__text {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin-right: 1rem;
+        span {
+          font-weight: 700;
+        }
+      }
+      &__button {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: transparent;
+        border-style: none;
+        cursor: pointer;
+        transition: all 0.2s;
+        &:hover {
+          transform: translateY(-2px);
+        }
+        &__icon {
+          width: 2.5rem;
+          stroke: $color-primary;
+        }
+      }
+    }
+    &__bookmark {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      border-style: none;
+      background-image: $gradient;
+      margin-left: auto;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover {
+        transform: translateY(-2px);
+      }
+      &__icon {
+        width: 2.5rem;
+        stroke: white;
+      }
+      &__icon.selected {
+        width: 2.5rem;
+        fill: white;
+      }
+    }
+  }
+}
+
+.ingredients {
+  background-color: $color-grey-light-2;
+  padding: 6rem 8rem;
+  &__heading {
+    color: $color-primary;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  &__text {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1.6rem;
+    color: $color-grey-dark-1;
+
+    &__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      stroke: $color-primary;
+    }
+    span {
+      width: 25rem;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 4rem;
+  }
+}
+
+.recipe-link {
+  padding: 6rem 8rem;
+  text-align: center;
+  &__heading {
+    color: $color-primary;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+
+    margin-bottom: 3rem;
+  }
+  &__text {
+    font-size: 1.8rem;
+    color: $color-grey-dark-2;
+    margin-bottom: 4rem;
+  }
+  &__publisher {
+    font-weight: 700;
+  }
+  &__btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    border-radius: 51px;
+    background-image: $gradient;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 4rem;
+  }
+}
